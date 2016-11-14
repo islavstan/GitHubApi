@@ -21,14 +21,14 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/username"
-    android:text="Stas"
+
     android:layout_margin="5dp"
     android:textSize="14sp"/>
 <TextView
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/logIn"
-    android:text="Stas"
+
     android:textSize="14sp"
     android:layout_margin="5dp"/>
 
@@ -36,14 +36,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/followers"
-        android:text="Stas"
+
         android:textSize="14sp"
         android:layout_margin="5dp"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/following"
-        android:text="Stas"
+
         android:textSize="14sp"
         android:layout_margin="5dp"/>
 
@@ -51,7 +51,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/email"
-        android:text="Stas"
+
+        android:textSize="14sp"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/repos"
+
         android:textSize="14sp"
         android:layout_margin="5dp"/>
 

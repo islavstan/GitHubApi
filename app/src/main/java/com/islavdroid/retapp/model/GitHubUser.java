@@ -12,10 +12,21 @@ public class GitHubUser {
     private String followers;
     @SerializedName("following")
     private String following;
-    @SerializedName("avatar")
+    @SerializedName("avatar_url")
     private String   avatar;
     @SerializedName("email")
     private String  email;
+
+    public String getRepos() {
+        return repos;
+    }
+
+    public void setRepos(String repos) {
+        this.repos = repos;
+    }
+
+    @SerializedName("public_repos")
+    private String repos;
 
     public String getLogin() {
         return login;

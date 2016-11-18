@@ -2,9 +2,7 @@ package com.islavdroid.retapp.model;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by islav on 14.11.2016.
- */
+
 
 public class GitHubRepo {
     @SerializedName("name")

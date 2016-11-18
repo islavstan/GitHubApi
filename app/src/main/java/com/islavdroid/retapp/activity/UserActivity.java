@@ -29,10 +29,8 @@ public class UserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-
         extras = getIntent().getExtras();
         userName =extras.getString("USERNAME");
-
         userNameTV =(TextView)findViewById(R.id.username);
         followersTV =(TextView)findViewById(R.id.followers);
         followingTV =(TextView)findViewById(R.id.following);
@@ -49,9 +47,6 @@ public class UserActivity extends AppCompatActivity {
         });
         loadData();
     }
-
-
-
     private void loadData(){
         //подключаемся по url
         final GitHubUserEndPoints apiService = ApiClient.getClient().create(GitHubUserEndPoints.class);
@@ -71,9 +66,7 @@ public class UserActivity extends AppCompatActivity {
                 emailTV.setText("email: "+response.body().getEmail());}
                 reposTV.setText("Your repositories: "+response.body().getRepos());
                 Picasso.with(UserActivity.this).load(response.body().getAvatar()).resize(220,220).into(avatar);
-
             }
-
             @Override
             //здесь если инфы нет на сервере
             public void onFailure(Call<GitHubUser> call, Throwable t) {
@@ -81,7 +74,6 @@ public class UserActivity extends AppCompatActivity {
             }
         });
     }
-
     public void loadOwnRepos(){
         Intent intent =new Intent(UserActivity.this,Repositories.class);
         intent.putExtra("USERNAME",userName);
